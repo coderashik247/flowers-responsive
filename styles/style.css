@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-family: "Quicksand", sans-serif; */
+    background-color: rgb(245, 248, 255);
 }
 
 /* 
@@ -17,6 +17,16 @@ nav .menu-card ul {
     align-items: center;
 }
 
+.banner-section-left>p,
+.our-plants-section>p {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 3%;
+}
+
 body {
     width: 80%;
     margin: 0 auto;
@@ -28,14 +38,25 @@ nav {
     align-items: center;
 }
 
-nav .menu {}
-
 nav .menu-card ul li {
     list-style: none;
 }
 
-nav .menu-card ul a,
-.menu-btn a {
+nav .menu-card ul a {
+    font-family: "Inter", sans-serif;
+    text-decoration: none;
+    color: rgb(137, 135, 161);
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    font-weight: 400;
+}
+
+.menu-btn>button {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: "Inter", sans-serif;
     text-decoration: none;
     color: rgb(137, 135, 161);
@@ -71,19 +92,9 @@ nav .menu-card ul a,
     margin-bottom: 30px;
 }
 
-.banner-section-left .fresh-span {
+.fresh-span {
     font-family: "Noto Serif", serif;
     color: rgb(233, 90, 8);
-}
-
-.banner-section-left>p {
-    color: rgba(0, 0, 0, 0.5);
-    font-family: "Inter", sans-serif;
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 29px;
-    letter-spacing: 3%;
-
 }
 
 .banner-section-left {
@@ -98,4 +109,125 @@ nav .menu-card ul a,
     width: 100%;
     height: 400px;
     display: block;
+}
+
+/* our-plants-section styles here */
+
+.our-plants-section {
+    text-align: center;
+    margin-top: 120px;
+}
+
+.our-plants-section>h2 {
+    font-family: "Noto Serif", serif;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.our-plants-section>p {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.flower-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.flower-card {
+    text-align: center;
+    border: 1px dashed lightgray;
+    margin-top: 50px;
+}
+
+.flower-card>img {
+    width: 100%;
+    height: 380px;
+}
+
+.flower-card>h2 {
+    color: rgb(17, 17, 17);
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    margin-top: 25px;
+}
+
+.flower-card>p {
+    color: rgb(17, 17, 17);
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 12px;
+}
+
+.add-to-cart-btn {
+    margin-top: 25px;
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    background-color: rgb(233, 90, 8);
+    border: none;
+}
+
+
+/* Responsive Design */
+
+/* Small device */
+@media screen and (max-width:576px) {
+
+    .banner-section-left>p,
+    .our-plants-section>p {
+        width: 100%;
+        text-align: justify;
+    }
+
+
+    .menu-card {
+        /* visibility: hidden; */
+        display: none;
+    }
+
+    .menu-btn>button {
+        font-size: 22px;
+    }
+
+    .banner-section {
+        align-items: center;
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+
+    .banner-section-left>h2 {
+        margin-top: 20px;
+        font-size: 45px;
+        line-height: 55px;
+    }
+
+    .flower-card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .flower-card>img {
+        height: 200px;
+    }
+
+    .flower-card>h2 {
+        font-size: 18px;
+    }
+
+    .flower-card>p {
+        font-size: 18px;
+    }
+
+    .add-to-cart-btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+
 }
