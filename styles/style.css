@@ -19,7 +19,8 @@ nav .menu-card ul {
 
 .banner-section-left>p,
 .our-plants-section>p,
-.flower-plants-description>ul>li {
+.flower-plants-description>ul>li, 
+footer > .logo-footer>p {
     color: rgba(0, 0, 0, 0.5);
     font-family: "Inter", sans-serif;
     font-size: 22px;
@@ -270,8 +271,11 @@ nav .menu-card ul a {
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
-    padding: 190px 0;
-    /* margin-bottom: 30px; */
+    height: 580px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .join-bunch-section>h2 {
@@ -283,14 +287,18 @@ nav .menu-card ul a {
 }
 
 input[type="email"] {
-    padding: 12px 200px 12px 20px;
+    /* padding: 12px 200px 12px 20px; */
+    width: 645px;
+    height: 50px;
+    margin: 0 auto;
+    padding-left: 20px;
 }
 
 input[type="button"] {
-    padding: 12px 25px;
+    /* padding: 12px 25px; */
+    width: 185px;
+    height: 51px;
     position: relative;
-    /* border: 1px 1px 1px 0 ; */
-    /* border: 1px solid rgb(233, 90, 8); */
     border: 1px solid rgb(233, 90, 8);
     background-color: rgb(233, 90, 8);
     left: -5px;
@@ -306,6 +314,65 @@ input[type="email"] {
 }
 
 /* footer section styles here */
+footer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.logo-footer {
+    grid-column: span 2;
+}
+
+.logo-footer> p{
+    width: 90%;
+    margin-top: 30px;
+    line-height: 38px !important;
+}
+
+.footer-menu-one>ul>li,
+.footer-menu-two>ul>li{
+    list-style: none;
+    padding-bottom: 30px;
+}
+
+.footer-menu-one>ul>li>a,
+.footer-menu-two>ul>li>a {
+    
+    color: rgb(107, 114, 128);
+    font-family: "Inter", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer-menu-one {
+    padding: 20px 80px 20px 20px;
+}
+
+.footer-menu-two {
+    padding: 20px 20px 20px 80px;
+}
+
+.footer-image {
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.footer-image img {
+    padding: 35px;
+    height: 40px;
+    width: 40px;
+}
+
+.footer-menu-container {
+    display: flex;
+    grid-column: span 2;
+    padding: 0 40px;
+}
 
 
 
