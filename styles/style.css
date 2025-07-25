@@ -19,8 +19,9 @@ nav .menu-card ul {
 
 .banner-section-left>p,
 .our-plants-section>p,
-.flower-plants-description>ul>li, 
-footer > .logo-footer>p {
+.flower-plants-description>ul>li,
+footer>.logo-footer>p,
+.latest-deals-section>p {
     color: rgba(0, 0, 0, 0.5);
     font-family: "Inter", sans-serif;
     font-size: 22px;
@@ -127,7 +128,8 @@ nav .menu-card ul a {
     margin-top: 120px;
 }
 
-.our-plants-section>h2 {
+.our-plants-section>h2,
+.latest-deals-section>h2 {
     font-family: "Noto Serif", serif;
     font-size: 50px;
     font-weight: 700;
@@ -238,30 +240,133 @@ nav .menu-card ul a {
 
 /* latest deals section */
 
-.image-section {
+.latest-deals-section {
+    text-align: center;
+}
+
+.latest-deals-section>p {
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+
+.deal-card-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 50px;
 }
 
-.image-row-one {
-    border: 1px solid red;
+.deal-card-ana {
+    height: 650px;
+}
+
+.card-bloom,
+.card-ana {
+    border: 1px solid;
+    height: 50%;
+}
+
+.card-bloom {
+    background-image: url(../assets/deal-bloom.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    margin-bottom: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.card-ana {
+    background-image: url(../assets/deal-ana.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    margin-bottom: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+
+}
+
+.card-bloom>h2,
+.card-ana>h2,
+.deal-card-zabo>h2 {
+    color: rgb(255, 255, 255);
+    font-family: "Noto Serif", serif;
+    font-size: 24px;
+    font-weight: 900;
+    position: relative;
+    z-index: 1;
+}
+
+.deal-card-zabo>h2 {
+    font-size: 42px;
+}
+
+.card-bloom>p,
+.card-ana>p,
+.deal-card-zabo>p {
+    color: rgb(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    margin-top: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration-line: underline;
+    position: relative;
+    z-index: 1;
+}
+
+.deal-card-zabo>p {
+    font-size: 28px;
+}
+
+.deal-card-zabo {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 660px;
+    border-radius: 20px;
+
+    background-image: url(../assets/deal-zabo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.deal-card-zabo>img {
     width: 100%;
     display: block;
-    grid-column: span 1;
+    height: 100%;
+    border-radius: 20px;
+    filter: brightness(60%);
 }
 
-.image-row-two {
-    border: 1px solid red;
-    width: 100%;
+.card-bloom::before,
+.card-ana::before,
+.deal-card-zabo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    z-index: 0;
 }
-
-.image-row-three {
-    border: 1px solid red;
-    width: 100%;
-    grid-column: span 3;
-}
-
-
 
 
 /* join-bunch section start here */
@@ -325,21 +430,21 @@ footer {
     grid-column: span 2;
 }
 
-.logo-footer> p{
+.logo-footer>p {
     width: 90%;
     margin-top: 30px;
     line-height: 38px !important;
 }
 
 .footer-menu-one>ul>li,
-.footer-menu-two>ul>li{
+.footer-menu-two>ul>li {
     list-style: none;
     padding-bottom: 30px;
 }
 
 .footer-menu-one>ul>li>a,
 .footer-menu-two>ul>li>a {
-    
+
     color: rgb(107, 114, 128);
     font-family: "Inter", sans-serif;
     font-size: 22px;
@@ -450,5 +555,79 @@ footer {
     .flower-plants-description>ul>li {
         margin-left: 10px;
     }
+
+    .deal-card-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+    }
+
+    .latest-deals-section>p{
+        text-align: justify;
+    }
+
+    .deal-card-zabo, .card-ana, .card-bloom {
+        height: 325px;
+        width: 379.5px;
+    }
+
+    .deal-card-zabo>h2 {
+        font-size: 24px;
+    }
+
+    .deal-card-zabo>p {
+        font-size: 16px;
+    }
+
+    input[type="email"] {
+        width: 215px;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .logo-footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .logo-footer>p{
+        text-align: justify;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .footer-menu-container{
+        display: inline;
+        padding-left: 0;
+    }
+
+    .footer-menu-one{
+        padding: 23px;
+        margin-top: 30px;
+        padding-bottom: 0;
+    }
+    .footer-menu-two{
+        
+        padding: 23px;
+        padding-top: 0;
+    }
+
+    .footer-image>img{
+        padding-left: 0;
+        justify-content: baseline;
+    }
+
+    .join-bunch-section{
+        width: 100%;
+    }
+
 
 }
